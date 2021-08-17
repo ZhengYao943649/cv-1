@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>郑垚的简历</title>
+</head>
+<body>
+    <style id="style"></style>
+    <div id="html"></div>
+    <div id="divWrapper">
+        <div id="div1"></div>
+    </div>
+    <style>*{margin:0;padding:0;box-sizing: border-box;}
+        *::before{box-sizing: border-box;}
+        *::after{box-sizing: border-box;}
+        #html{
+            /*解决页面横向滚动条，自动换行*/
+            word-break:break-all;
+        }
+        #div1{
+            position: fixed;
+            left: 50%;
+            transform:translateX(-50%);
+            top: 0;
+
+        }
+        #div1::before{
+            content:'';
+            display:block;
+            width:100px;
+            height:100px;
+            position: absolute;
+        }
+        #div1::after{
+            content:'';
+            display:block;
+            width:100px;
+            height:100px;
+            position: absolute;
+        }
+        
+        /*新增媒体查询，适配手机*/
+        @media (max-width: 500px) {
+            #html{
+                height: 50vh;
+                overflow: auto;
+            }
+            #divWrapper{
+                height: 50vh;
+            }
+            #div1{
+                position: relative;
+                top: 50%;
+                right: 0;
+                margin:0 auto;
+                margin-top:-25%;
+
+            }
+        }</style>
+    <script src="/main.1f19ae8e.js"></script>
+
+</body>
+</html>
